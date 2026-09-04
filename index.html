@@ -661,14 +661,17 @@
     .yellow { background: #febc2e; }
     .green { background: #28c840; }
 
-    .terminal-title {
-  margin-top: 0px;      
-  margin-left: 10px;
-  color: var(--muted);
-  font-size: clamp(0.65rem, 1.2vw, 0.85rem);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  .terminal-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+    width: 100%;
+    text-align: center;
+    line-height: 1.4;
 }
 
 .terminal-title a {
@@ -702,7 +705,7 @@
 
     .cursor {
       display: inline-block;
-      width: 9px;
+      width: 5px;
       height: 18px;
       background: var(--primary);
       vertical-align: middle;
@@ -757,6 +760,42 @@
       color: var(--muted);
       font-size: 0.9rem;
     }
+
+   .contact-name {
+    width: 100%;
+    text-align: center;
+
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #e6edf3;
+}
+
+.contact-details {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    gap: 8px;
+
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contact-details a {
+    color: #39d9ff;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(57, 217, 255, 0.7);
+}
+
+.contact-separator {
+    color: #7f8b99;
+}
 
     /* =========================================
        PROJECT SECTION
@@ -1667,16 +1706,23 @@
   <span class="circle yellow"></span>
   <span class="circle green"></span>
 
-  <span class="terminal-title">
-    Sakthivel Shanmugam |
-    <a href="mailto:shakthi198507@gmail.com">
-      shakthi198507@gmail.com
-    </a>
-    |
-    <a href="tel:+91XXXXXXXXXX">
-      +91 88070 52213
-    </a>
-  </span>
+  <div class="terminal-title">
+    <div class="contact-name">
+    SAKTHIVEL SHANMUGAM
+    </div>
+
+    <div class="contact-details">
+        <a href="mailto:shakthi198507@gmail.com">
+            shakthi198507@gmail.com
+        </a>
+
+        <span class="contact-separator">|</span>
+
+        <a href="tel:+918807052213">
+            +91 88070 52213
+        </a>
+    </div>
+</div>
 </div>
 
         <div class="terminal-body">
