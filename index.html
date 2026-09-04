@@ -435,8 +435,8 @@
 
     .logo {
       font-size: 1.4rem;
-      font-weight: 800;
-      letter-spacing: 1px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
       text-decoration: none;
       color: var(--text);
     }
@@ -902,6 +902,196 @@
     }
 
     /* =========================================
+   ABOUT ME - CONTACT CARD
+   ========================================= */
+
+.about-contact-card {
+    width: 430px;
+    max-width: 100%;
+
+    padding: 26px 30px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(18, 32, 47, 0.9),
+        rgba(16, 18, 35, 0.95)
+    );
+
+    border: 1px solid rgba(55, 210, 255, 0.25);
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(45, 210, 255, 0.04);
+
+    backdrop-filter: blur(10px);
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.about-contact-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(57, 217, 255, 0.65);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(57, 217, 255, 0.12);
+}
+
+
+/* CARD TITLE */
+
+.contact-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 22px;
+    padding-bottom: 14px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #4ddcff;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.contact-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #36e67a;
+
+    box-shadow: 0 0 12px rgba(54, 230, 122, 0.8);
+}
+
+
+/* CONTACT ROW */
+
+.about-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 14px 0;
+
+    transition: transform 0.3s ease;
+}
+
+.about-contact-item:hover {
+    transform: translateX(6px);
+}
+
+
+/* ICON */
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(57, 217, 255, 0.35);
+    border-radius: 10px;
+
+    background: rgba(57, 217, 255, 0.06);
+
+    color: #42d9ff;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* TEXT */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    min-width: 0;
+}
+
+.contact-info span {
+    color: #8d99a8;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-info a {
+    color: #e4edf5;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #3edcff;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 390px;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+}
+
+.about-text {
+    width: 100%;
+    min-width: 0;
+    max-width: 700px;
+}
+
+.about-description {
+    font-size: 1.20rem;
+    line-height: 1.75;
+    margin-bottom: 75px;
+}
+
+.about-contact-card {
+    width: 390px;
+    flex-shrink: 0;
+
+    padding: 24px 28px;
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        135deg,
+        rgba(18, 32, 47, 0.95),
+        rgba(20, 22, 42, 0.98)
+    );
+
+    border: 1px solid rgba(57, 217, 255, 0.35);
+    border-radius: 16px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(57, 217, 255, 0.06);
+}
+
+
+    /* =========================================
    NAVBAR CONTACT DETAILS
 ========================================= */
 
@@ -1272,6 +1462,89 @@
       .secondary-btn {
         text-align: center;
       }
+/* =========================================
+   ABOUT SECTION - MOBILE
+========================================= */
+
+.about-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.about-heading {
+    margin-bottom: 30px;
+}
+
+.about-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+}
+
+
+/* LEFT SIDE */
+
+.about-text {
+    max-width: 100%;
+}
+
+.about-description {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 25px;
+}
+
+
+/* BUTTONS */
+
+.about-actions {
+    flex-direction: column;
+    width: 100%;
+}
+
+.about-actions .primary-btn,
+.about-actions .secondary-btn {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* RIGHT CONTACT BOX */
+
+.about-contact-card {
+    width: 100%;
+    max-width: 100%;
+    justify-self: stretch;
+
+    padding: 22px 18px;
+}
+
+.contact-card-header {
+    margin-bottom: 16px;
+    padding-bottom: 13px;
+
+    font-size: 0.72rem;
+}
+
+.about-contact-item {
+    gap: 12px;
+    padding: 12px 0;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+
+    font-size: 16px;
+}
+
+.contact-info span {
+    font-size: 0.68rem;
+}
+
+.contact-info a {
+    font-size: 0.88rem;
+}
+
     }
 
     /* =========================================
@@ -1603,13 +1876,25 @@
   }
 
   .terminal-title {
-    font-size: 0.52rem;
-  }
+        gap: 3px !important;
+        padding: 0 8px !important;
+    }
 
-  .terminal-body {
-    font-size: 0.70rem;
-    padding: 18px 10px;
-  }
+    .contact-name {
+        font-size: 14px !important;
+        letter-spacing: 0.5px !important;
+        white-space: nowrap;
+    }
+
+    .contact-details {
+        font-size: 12px !important;
+        gap: 5px !important;
+        white-space: nowrap;
+    }
+
+    .contact-separator {
+        margin: 0 2px;
+    }
 }
   </style>
 </head>
@@ -2075,33 +2360,111 @@
     
 
     <!-- ABOUT -->
-    <section class="section" id="about">
+    <!-- ABOUT -->
+<section class="section about-section" id="about">
 
-      <p class="section-tag">// ABOUT ME</p>
+    <!-- SECTION HEADING -->
+    <div class="about-heading">
+        <p class="section-tag">// ABOUT ME</p>
 
-      <h2 class="section-title">
-        Turning Infrastructure Into Automation.
-      </h2>
+        <h2 class="section-title">
+            Turning Infrastructure Into Automation.
+        </h2>
+    </div>
 
-      <p class="section-description">
-        I focus on Cloud and DevOps practices including AWS,
-        Docker, Terraform, Kubernetes and CI/CD automation.
-        My goal is to build reliable, scalable and automated
-        solutions that solve real-world engineering challenges.
-      </p>
 
-      <div class="hero-buttons">
-        <a href="https://github.com/" class="primary-btn">
-          View GitHub →
-        </a>
+    <!-- ABOUT CONTENT -->
+    <div class="about-content">
 
-        <a href="mailto:your-email@example.com" class="secondary-btn">
-          Contact Me
-        </a>
-      </div>
+        <!-- LEFT SIDE -->
+        <div class="about-text">
 
-    </section>
+            <p class="about-description">
+                I focus on Cloud and DevOps practices including AWS, Docker,
+                Terraform, Kubernetes and CI/CD automation. My goal is to build
+                reliable, scalable and automated solutions that solve
+                real-world engineering challenges.
+            </p>
 
+            <div class="about-actions">
+
+                <a href="https://github.com/Sakthi850704"
+                   target="_blank"
+                   class="primary-btn">
+                    View GitHub →
+                </a>
+
+                <a href="mailto:shakthi198507@gmail.com"
+                   class="secondary-btn">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE - LET'S CONNECT -->
+        <div class="about-contact-card">
+
+            <div class="contact-card-header">
+                <span class="contact-dot"></span>
+                LET'S CONNECT
+            </div>
+
+
+            <!-- EMAIL -->
+            <div class="about-contact-item">
+
+                <div class="contact-icon">✉</div>
+
+                <div class="contact-info">
+                    <span>Email</span>
+
+                    <a href="mailto:shakthi198507@gmail.com">
+                        shakthi198507@gmail.com
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- PHONE -->
+            <div class="about-contact-item">
+
+                <div class="contact-icon">☎</div>
+
+                <div class="contact-info">
+                    <span>Phone</span>
+
+                    <a href="tel:+918807052213">
+                        +91 88070 52213
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- LINKEDIN -->
+            <div class="about-contact-item">
+
+                <div class="contact-icon">in</div>
+
+                <div class="contact-info">
+                    <span>LinkedIn</span>
+
+                    <a href="https://www.linkedin.com/in/shakthi850/" target="_blank" rel="noopener noreferrer">
+                    www.linkedin.com/in/shakthi850
+                     </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
   </main>
 
 
